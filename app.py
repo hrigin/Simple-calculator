@@ -1,4 +1,5 @@
-from flask import Flask, request, render_template
+# импорт необходимых библеотек
+from flask import Flask, request, render_template 
 import logging
 
 # Настройка логирования
@@ -6,6 +7,7 @@ logging.basicConfig(filename='calculator.log', level=logging.INFO, format='%(asc
 
 app = Flask(__name__)
 
+# создание объекта калькулятора
 calculator = {
     'displayValue': '0',
     'firstOperand': None,
@@ -13,6 +15,7 @@ calculator = {
     'operator': None,
 }
 
+# логика ввода значений
 def inputDigit(digit):
     if calculator['waitingForSecondOperand']:
         calculator['displayValue'] = digit
