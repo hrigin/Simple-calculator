@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Калькулятор - Толстиков В.А.</title>
+</head>
+<body class="bg-dark">
+
+    <form method="POST">
+
+        <div class="container overflow-hidden">
+            <div class="row mt-5">
+                <input type="text" name="display" value="{{ display }}" readonly class="calculator-screen">
+            </div>
+            <div class="row mt-5">
+                <button type="submit" name="button" value="all-clear" class="col-9 btn btn-light fw-bold fs-2 me-1">AC</button>
+                <button type="submit" name="button" value="/" class="col btn btn-warning fw-bold fs-2 ms-2">/</button>
+            </div>
+            <div class="row mt-2">
+    
+                <button type="submit" name="button" value="7" class="col btn btn-secondary fw-bold fs-2 me-2">7</button>
+                <button type="submit" name="button" value="8" class="col btn btn-secondary fw-bold fs-2 me-1">8</button>
+                <button type="submit" name="button" value="9" class="col btn btn-secondary fw-bold fs-2 ms-1">9</button>
+                <button type="submit" name="button" value="*" class="col btn btn-warning fw-bold fs-2 ms-2">X</button>
+                
+            </div>
+    
+            <div class="row mt-2">
+                <button type="submit" name="button" value="4" class="col btn btn-secondary fw-bold fs-2 me-2">4</button>
+                <button type="submit" name="button" value="5" class="col btn btn-secondary fw-bold fs-2 me-1">5</button>
+                <button type="submit" name="button" value="6" class="col btn btn-secondary fw-bold fs-2 ms-1">6</button>
+                <button type="submit" name="button" value="-" class="col btn btn-warning fw-bold fs-2 ms-2">-</button>
+            </div>
+    
+            <div class="row mt-2">
+                <button type="submit" name="button" value="1" class="col btn btn-secondary fw-bold fs-2 me-2">1</button>
+                <button type="submit" name="button" value="2" class="col btn btn-secondary fw-bold fs-2 me-1">2</button>
+                <button type="submit" name="button" value="3" class="col btn btn-secondary fw-bold fs-2 ms-1">3</button>
+                <button type="submit" name="button" value="+" class="col btn btn-warning fw-bold fs-2 ms-2">+</button>
+            </div>
+    
+            <div class="row mt-2">
+                <button type="submit" name="button" value="0" class="col-6 btn btn-secondary fw-bold fs-2 me-2">0</button>
+                <button type="submit" name="button" value="." class="col btn btn-secondary fw-bold fs-2">.</button>
+                <button type="submit" name="button" value="=" class="col btn btn-success fw-bold fs-2 ms-2">=</button>
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>
